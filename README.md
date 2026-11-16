@@ -64,6 +64,10 @@ python eval_online.py --offline runs/initial --output runs/online --n 60 --max-r
 
 To regenerate the full dataset from the pinned upstream source, run `prepare_wildchat.py`, `filter_short_prompts.py`, then `split_dataset.py`. The raw download requires approximately 1.5 GB. The bundled original-wording audit supports fresh samples from the included splits.
 
+## Contributing
+
+Do you have more scaffolds to add or other improvements to contribute? [Send a pull request!](https://github.com/ampdot-io/writing-scaffold)
+
 ## Publication scope and licensing
 
 The structured data export includes detector labels and metrics and omits generated output bodies. The HTML report includes rendered default views and historical tool-call totals, with raw generated outputs removed. Private rewrite implementation, full tool traces, credentials, account records, and the separate experimental rewrite directory are excluded.
