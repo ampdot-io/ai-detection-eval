@@ -1,0 +1,49 @@
+{
+  "input": "data/wildchat/short_prompts",
+  "seed": 42,
+  "source_rows": 932300,
+  "unique_prompts": 327516,
+  "first_surviving_prompts": 362905,
+  "later_surviving_prompts_removed": 569395,
+  "duplicates_removed": 35389,
+  "target_fractions": {
+    "train": 0.3333333333333333,
+    "validation": 0.3333333333333333,
+    "test": 0.3333333333333333
+  },
+  "splits": {
+    "train": {
+      "rows": 109172,
+      "conversations": 109172,
+      "fraction": 0.3333333333333333
+    },
+    "validation": {
+      "rows": 109172,
+      "conversations": 109172,
+      "fraction": 0.3333333333333333
+    },
+    "test": {
+      "rows": 109172,
+      "conversations": 109172,
+      "fraction": 0.3333333333333333
+    }
+  },
+  "method": "Keep only the first surviving prompt per conversation in filtered source order; remove duplicate UTF-8 prompts keeping their first occurrence. Assign records in SHA-256(seed:conversation_id) order to the smallest split. Current label tie order after requested train/test exchange: test, validation, train.",
+  "notes": "One prompt per conversation. A duplicate first surviving prompt removes that conversation; no later prompt is substituted. Source remains unchanged. Near-duplicates are not removed.",
+  "label_history": [
+    {
+      "at": "2026-10-31T21:06:31.486924+00:00",
+      "mapping": {
+        "train": "previous test",
+        "validation": "unchanged",
+        "test": "previous train"
+      },
+      "reason": "User requested relabeling after using the former test partition in model development."
+    }
+  ],
+  "assignment_tie_order": [
+    "test",
+    "validation",
+    "train"
+  ]
+}

@@ -1,0 +1,7 @@
+pyarrow>=18,<24
+nltk>=3.9,<4
+anthropic[mcp]==2.3.0
+python-dotenv==1.2.4
+mcp==2.3.0
+pangram-sdk==1.0.0
+httpx2==2.16.0

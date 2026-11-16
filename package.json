@@ -1,0 +1,11 @@
+{
+  "name": "ai-detection-eval",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "mcp": "node writing-scaffold.mjs --transport http"
+  }
+}

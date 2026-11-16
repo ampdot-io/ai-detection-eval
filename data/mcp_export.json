@@ -1,0 +1,14 @@
+{
+  "source_bundle_sha256": "759876e7406596206996378bf5dbd976331e5e7cc38abba85bdfae811eb60f1a",
+  "public_bundle_sha256": "98b20c01340eecd3b3d662e483ac04689ea8087c9825e26f0786dccc901e6826",
+  "tools": [
+    "write_with_scaffold",
+    "get_scaffold",
+    "list_scaffolds",
+    "list_references"
+  ],
+  "changes": [
+    "Removed the private rewrite implementation, tokenizer and diff dependencies, tool definition, dispatch, provider setup, and prompt references.",
+    "Preserved bundled scaffold corpus and remaining server behavior."
+  ]
+}

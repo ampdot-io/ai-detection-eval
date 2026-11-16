@@ -1,0 +1,179 @@
+{
+  "dataset": "allenai/WildChat",
+  "revision": "f66566ceaaeb619dd98ffb0f3bf3ce1f86775ac4",
+  "created_at": "2026-10-31T19:42:14.806622+00:00",
+  "total_conversations": 529428,
+  "total_prompts": 1242843,
+  "edited_prompts": 1292,
+  "needs_review": 1104,
+  "row_25_prompts": [
+    {
+      "conversation_id": "bd25d40df389c05875cff8eda739125f",
+      "source_row": 25,
+      "message_index": 0,
+      "model": "gpt-4",
+      "language": "English",
+      "prompt": "Write an engaging and a constructive article for my Morocco travel guide book on \"Peak season in Morocco\".",
+      "edited": true,
+      "needs_review": false
+    }
+  ],
+  "rule_prompt_counts": {
+    "humanlike_style": 780,
+    "humanize": 6,
+    "human_written": 145,
+    "human_style": 7,
+    "not_ai_written": 2,
+    "detection_evasion": 0,
+    "perplexity_burstiness": 47,
+    "unnatural_sentences": 606,
+    "non_repetitive_phrases": 611,
+    "human_written_adjective": 177,
+    "complexity_instruction": 179,
+    "human_written_modifier": 147,
+    "ai_detection_clause": 64,
+    "machine_style_sentence": 11,
+    "write_like_human": 13,
+    "humanized_modifier": 1
+  },
+  "edit_rules": [
+    [
+      "machine_style_sentence",
+      "(?:Your|The)\\s+(?:answers?|responses?|text|writing)\\s+(?:should|must)\\s+not\\s+sound\\s+like\\s+(?:a\\s+)?(?:machine|robot|ai)\\b[^.!?\\n]*[.!?]?",
+      ""
+    ],
+    [
+      "artificial_errors",
+      "(?:To\\s+make\\s+[^.!?\\n]{0,100}(?:natural|human)[^.!?\\n]{0,100},\\s*)?(?:include|introduce|add|use)\\s+(?:(?:some|occasional|intentional|deliberate|minor)\\s+)*(?:grammatical\\s+errors|grammar\\s+mistakes|typos)\\s+(?:to\\s+[^.!?\\n]{0,100}(?:human|natural)[^.!?\\n]*)[.!?]?",
+      ""
+    ],
+    [
+      "humanlike_style",
+      "\\b(?:(?:with|in|using)\\s+(?:a\\s+)?)?human[\\s-]?like\\s+(?:style|writing|text|tone|voice|language|responses?|content)\\b",
+      ""
+    ],
+    [
+      "human_style",
+      "\\b(?:in|with|using)\\s+(?:a\\s+)?(?:more\\s+)?human\\s+(?:style|tone|voice)\\b",
+      ""
+    ],
+    [
+      "non_repetitive_phrases",
+      "\\b(?:with\\s+)?non[ -]?repetitive\\s+(?:phrases|phrasing|sentences)\\b",
+      ""
+    ],
+    [
+      "unnatural_sentences",
+      "\\b(?:and\\s+)?(?:avoid(?:ance\\s+of|ing)?|without|eliminat(?:e|ing))\\s+(?:any\\s+)?unnatural\\s+(?:sentences|phrases|phrasing|language)\\b",
+      ""
+    ],
+    [
+      "human_written",
+      "\\b(?:(?:make|ensure)\\s+(?:that\\s+)?(?:it|this|the\\s+(?:text|content|response|article|essay))\\s+)?(?:sounds?|looks?|reads?|seems?|appears?)\\s+(?:more\\s+)?(?:like\\s+)?(?:it\\s+(?:was|were|is)\\s+)?(?:written\\s+by\\s+)?(?:a\\s+)?(?:real\\s+)?human\\b",
+      ""
+    ],
+    [
+      "human_written_modifier",
+      "\\b(?:as\\s+(?:if\\s+)?(?:it\\s+(?:was|were)\\s+)?|like\\s+(?:it\\s+(?:was|were)\\s+)?)written\\s+by\\s+(?:a\\s+)?(?:real\\s+)?human\\b",
+      ""
+    ],
+    [
+      "human_written_adjective",
+      "\\bhuman[ -]written\\b",
+      ""
+    ],
+    [
+      "write_like_human",
+      "\\b(write|respond|speak)\\s+(?:more\\s+)?like\\s+(?:a\\s+)?(?:real\\s+)?human\\b",
+      "\\1"
+    ],
+    [
+      "humanize",
+      "\\bhumani[sz]e\\b(?=\\s+(?:(?:this|the|my|your|following|provided|above)\\s+)?(?:text|essay|article|content|response|paragraph|writing|draft|passage|answer)\\b)",
+      "rewrite"
+    ],
+    [
+      "humanized_modifier",
+      "\\bhumani[sz]ed\\b(?=\\s+(?:text|essay|article|content|response|paragraph|writing|draft|passage|answer)\\b)",
+      ""
+    ],
+    [
+      "not_ai_written",
+      "\\b(?:(?:please\\s+)?(?:do\\s+not|don't|avoid|without|never)\\s+)(?:make\\s+(?:it|this|the\\s+(?:text|content|response))\\s+)?(?:sound(?:ing)?|look(?:ing)?|seem(?:ing)?|appear(?:ing)?)\\s+like\\s+(?:an?\\s+)?(?:ai|robot|machine|chatbot)(?:[ -](?:generated|written))?\\b",
+      ""
+    ],
+    [
+      "ai_detection_clause",
+      "\\b(?:to\\s+)?(?:bypass|evade|avoid|beat|fool|pass)\\s+(?:(?:all|any|an?|the)\\s+)?(?:ai|gpt|chatgpt|machine)[\\s-]*(?:text\\s+|content\\s+)?detect(?:or|ion)s?\\b",
+      ""
+    ],
+    [
+      "complexity_instruction",
+      "\\b(?:consider|use|include|incorporate|ensure|maintain)\\s+[^.!?\\n]{0,60}\\bperplexity\\b[^.!?\\n]{0,60}\\bburstiness\\b[^.!?\\n]*[.!?]?",
+      ""
+    ],
+    [
+      "perplexity_burstiness",
+      "\\b(?:(?:with|using|use|include|incorporate|maintain)\\s+(?:(?:a\\s+)?(?:high|low|good|varied|higher|greater|significant)\\s+(?:degree\\s+of\\s+|level\\s+of\\s+)?)?|(?:a\\s+)?(?:high|low|good|varied|higher|greater|significant)\\s+(?:degree\\s+of\\s+|level\\s+of\\s+)?)(?:perplexity(?:\\s+and\\s+(?:(?:high|low)\\s+)?burstiness)?|burstiness)\\b",
+      ""
+    ]
+  ],
+  "shards": [
+    {
+      "file": "train-00000-of-00006.parquet",
+      "download_bytes": 290754400,
+      "source_sha256": "d42159f2cc33b6c90aa5ca429aa625cff5ed7c72d6c66a64993957fa9444b48e",
+      "filtered_sha256": "aa4665d990d998d09b891896482843a5e742fa14befe882ee780b0bf333a8c1a",
+      "source_conversations": 88238,
+      "prompts": 249514,
+      "edited_prompts": 671
+    },
+    {
+      "file": "train-00001-of-00006.parquet",
+      "download_bytes": 270261380,
+      "source_sha256": "1c5a1b4bb4dee16b1cb44dfe58f9fe13c31d4782454ecb3fbbaa20cfca8f6491",
+      "filtered_sha256": "bacc75c5b8d9b54591f80a774b40bdbc6a439745b53e7705578b5380132e06b8",
+      "source_conversations": 88238,
+      "prompts": 223763,
+      "edited_prompts": 409
+    },
+    {
+      "file": "train-00002-of-00006.parquet",
+      "download_bytes": 279615022,
+      "source_sha256": "64f42e2d4d61904f1978c9e1e1543b6283f3cd19827704e1c72d60ae1155d9b6",
+      "filtered_sha256": "27842f955adcd975317140c93b20ff752dac70226db6914be753b31f890252ea",
+      "source_conversations": 88238,
+      "prompts": 227789,
+      "edited_prompts": 110
+    },
+    {
+      "file": "train-00003-of-00006.parquet",
+      "download_bytes": 268728245,
+      "source_sha256": "af6348f9b6a1429e10315ed27a6286e1ee585b63e704fdc54f81540f237985a3",
+      "filtered_sha256": "aa8760caafa803008e26c4a6ed485d81faf025c7eb5eee10dad3bd6b8169a23d",
+      "source_conversations": 88238,
+      "prompts": 189258,
+      "edited_prompts": 12
+    },
+    {
+      "file": "train-00004-of-00006.parquet",
+      "download_bytes": 246127064,
+      "source_sha256": "1a9e59d0a6165c0195b75060ed9a2044b337eb3e756d067be4ff7a240248386c",
+      "filtered_sha256": "8938e66f118c0d8b377223ab839b0c3c500c5c6eac426f571e75c1049e3ed213",
+      "source_conversations": 88238,
+      "prompts": 177655,
+      "edited_prompts": 44
+    },
+    {
+      "file": "train-00005-of-00006.parquet",
+      "download_bytes": 231061961,
+      "source_sha256": "2023b66a16cf095fcd3686e10259dc089eca95f739fa1c863b07af56029f9f00",
+      "filtered_sha256": "45fd78c69e7b8319546afeadf3e43c4676c2a75c1d8d1ada3cd7c65e6a44de4c",
+      "source_conversations": 88238,
+      "prompts": 174864,
+      "edited_prompts": 46
+    }
+  ],
+  "method": "Extract every user message; remove humanization wording using explicit English regexes. No assistant responses in prompt output. Raw download remains unmodified.",
+  "limitations": "English lexical heuristics; may miss paraphrases and other languages or alter quoted/discussed examples. Residual matches and emptied prompts are marked needs_review. Review prompt_edits.jsonl before relying on a fully cleaned corpus."
+}

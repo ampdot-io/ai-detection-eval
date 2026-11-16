@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-31T21:06:31.486924+00:00",
+  "old_manifest": {
+    "input": "data/wildchat/short_prompts",
+    "seed": 42,
+    "source_rows": 932300,
+    "unique_prompts": 327516,
+    "first_surviving_prompts": 362905,
+    "later_surviving_prompts_removed": 569395,
+    "duplicates_removed": 35389,
+    "target_fractions": {
+      "train": 0.3333333333333333,
+      "validation": 0.3333333333333333,
+      "test": 0.3333333333333333
+    },
+    "splits": {
+      "train": {
+        "rows": 109172,
+        "conversations": 109172,
+        "fraction": 0.3333333333333333
+      },
+      "validation": {
+        "rows": 109172,
+        "conversations": 109172,
+        "fraction": 0.3333333333333333
+      },
+      "test": {
+        "rows": 109172,
+        "conversations": 109172,
+        "fraction": 0.3333333333333333
+      }
+    },
+    "method": "Keep only the first surviving prompt per conversation in filtered source order; remove duplicate UTF-8 prompts keeping their first occurrence. Assign records in SHA-256(seed:conversation_id) order to the smallest split.",
+    "notes": "One prompt per conversation. A duplicate first surviving prompt removes that conversation; no later prompt is substituted. Source remains unchanged. Near-duplicates are not removed.",
+    "validation": {
+      "only_first_surviving_prompt": true,
+      "all_eligible_unique_first_prompts_preserved": true,
+      "conversation_overlap": 0,
+      "exact_prompt_overlap": 0,
+      "counts": {
+        "train": 109172,
+        "validation": 109172,
+        "test": 109172
+      }
+    }
+  },
+  "old_manifest_sha256": "b3b245b2ec9ff715a8f93f5a7054deae75e60a593c42002a05fa55ee5ab6dbdc",
+  "new_manifest_sha256": "d2e3d499c7076ac6a8c3f81180204f7742bff1bea948607af43bc294d91b07ed",
+  "file_sha256_before": {
+    "train": {
+      "train-00000-of-00006.parquet": "151f74bc7c6ebc6a92d3ccd61ccc8707676831e397a62987d0fdec420d6dee1c",
+      "train-00001-of-00006.parquet": "dc212cd336905df2294a54e218162c4b8652773d34e5886db3149793cc58af4e",
+      "train-00002-of-00006.parquet": "08c92402ce0473dbbb8d05e328c011978f3e3e42567d898745ce862e165ff925",
+      "train-00003-of-00006.parquet": "23875665d3108ba8684c39b94ad2c4a58ba94c7b3d4144c0b1406dadd7895c95",
+      "train-00004-of-00006.parquet": "226ef44b745dd9d9b95b657ebdb04262613915627d2dedc6507fdaa2b1e93149",
+      "train-00005-of-00006.parquet": "3d7c1b169719fef298e5febc623be0684133455fa301a4f38927ed3bcea5f28a"
+    },
+    "validation": {
+      "train-00000-of-00006.parquet": "13bfa12bcb79212d7dcb583b3005029e3c1a987e89a8ba3f8634f559955216d7",
+      "train-00001-of-00006.parquet": "da61ace7e2c1f8df721671a3500dc655a23fbecb4bcfe14732d6605b65f2ad34",
+      "train-00002-of-00006.parquet": "e740543a2fdd2fcfba5ae0f6f1f3c1533dcf389ec9e678b9c685e06a08d50c93",
+      "train-00003-of-00006.parquet": "489166ddfe9f498ee2cec676b7b7ce9d66062c3ec597aa375ee63fcfa7f8c768",
+      "train-00004-of-00006.parquet": "b0614c0b4e16d6e6095908fb560d7d6e99f2e72afdbcfa3407935610dd558618",
+      "train-00005-of-00006.parquet": "7d73106da43275df1c5ec6aba9f09b457b6c6ed67d0b81f9ec4a83ebafa83c36"
+    },
+    "test": {
+      "train-00000-of-00006.parquet": "dc14c6b9c54122f7c7c291eb1291439acae1935d020ac83502a32ced6d91a398",
+      "train-00001-of-00006.parquet": "b40ae7115b440bbf278ee934b63a258b309b0a2b87a3284fc12c2c2ab0b69593",
+      "train-00002-of-00006.parquet": "499247c5224bbbe069ee564969295ef43836de7aa85c30e2988ce45f3fbe5b6d",
+      "train-00003-of-00006.parquet": "c566ac794b65dbf2f797dadc8b68e50a2420551eadbe61158a114ab7843bd6bc",
+      "train-00004-of-00006.parquet": "4edda073a0ddef5c182627adfb67abf6e9fd9613a44375ef9d117454cd85c724",
+      "train-00005-of-00006.parquet": "01828319e5194dbf7ef9ab661aeb3430198c6ab831688a6336b4847d9c4d1da5"
+    }
+  },
+  "file_sha256_after": {
+    "train": {
+      "train-00000-of-00006.parquet": "dc14c6b9c54122f7c7c291eb1291439acae1935d020ac83502a32ced6d91a398",
+      "train-00001-of-00006.parquet": "b40ae7115b440bbf278ee934b63a258b309b0a2b87a3284fc12c2c2ab0b69593",
+      "train-00002-of-00006.parquet": "499247c5224bbbe069ee564969295ef43836de7aa85c30e2988ce45f3fbe5b6d",
+      "train-00003-of-00006.parquet": "c566ac794b65dbf2f797dadc8b68e50a2420551eadbe61158a114ab7843bd6bc",
+      "train-00004-of-00006.parquet": "4edda073a0ddef5c182627adfb67abf6e9fd9613a44375ef9d117454cd85c724",
+      "train-00005-of-00006.parquet": "01828319e5194dbf7ef9ab661aeb3430198c6ab831688a6336b4847d9c4d1da5"
+    },
+    "validation": {
+      "train-00000-of-00006.parquet": "13bfa12bcb79212d7dcb583b3005029e3c1a987e89a8ba3f8634f559955216d7",
+      "train-00001-of-00006.parquet": "da61ace7e2c1f8df721671a3500dc655a23fbecb4bcfe14732d6605b65f2ad34",
+      "train-00002-of-00006.parquet": "e740543a2fdd2fcfba5ae0f6f1f3c1533dcf389ec9e678b9c685e06a08d50c93",
+      "train-00003-of-00006.parquet": "489166ddfe9f498ee2cec676b7b7ce9d66062c3ec597aa375ee63fcfa7f8c768",
+      "train-00004-of-00006.parquet": "b0614c0b4e16d6e6095908fb560d7d6e99f2e72afdbcfa3407935610dd558618",
+      "train-00005-of-00006.parquet": "7d73106da43275df1c5ec6aba9f09b457b6c6ed67d0b81f9ec4a83ebafa83c36"
+    },
+    "test": {
+      "train-00000-of-00006.parquet": "151f74bc7c6ebc6a92d3ccd61ccc8707676831e397a62987d0fdec420d6dee1c",
+      "train-00001-of-00006.parquet": "dc212cd336905df2294a54e218162c4b8652773d34e5886db3149793cc58af4e",
+      "train-00002-of-00006.parquet": "08c92402ce0473dbbb8d05e328c011978f3e3e42567d898745ce862e165ff925",
+      "train-00003-of-00006.parquet": "23875665d3108ba8684c39b94ad2c4a58ba94c7b3d4144c0b1406dadd7895c95",
+      "train-00004-of-00006.parquet": "226ef44b745dd9d9b95b657ebdb04262613915627d2dedc6507fdaa2b1e93149",
+      "train-00005-of-00006.parquet": "3d7c1b169719fef298e5febc623be0684133455fa301a4f38927ed3bcea5f28a"
+    }
+  },
+  "updated_run_manifests": [
+    "data/evals/haiku_5_5_initial_n30_seed42/manifest.json",
+    "data/evals/haiku_5_5_online_n30_seed42/manifest.json",
+    "data/evals/pangram_mcp_n60_seed42/manifest.json",
+    "data/evals/pangram_mcp_online_n60_seed42/manifest.json",
+    "data/evals/sonnet_5_5_initial_n30_seed42/manifest.json",
+    "data/evals/sonnet_5_5_online_n30_seed42/manifest.json"
+  ],
+  "atomic_exchange": true
+}

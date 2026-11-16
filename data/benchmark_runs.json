@@ -1,0 +1,58 @@
+{
+  "gemini_4_argon_high_initial_n100_seed20261031": {
+    "sample_count": 100,
+    "completed_results": 98
+  },
+  "gemini_4_argon_high_initial_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "gemini_4_argon_high_online_n100_seed20261031": {
+    "sample_count": 100,
+    "completed_results": 97
+  },
+  "gemini_4_argon_high_online_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "gemini_4_argon_low_initial_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "gemini_4_argon_low_online_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "gemini_4_argon_medium_initial_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "gemini_4_argon_medium_online_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "haiku_5_5_initial_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 30
+  },
+  "haiku_5_5_online_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 28
+  },
+  "pangram_mcp_n60_seed42": {
+    "sample_count": 60,
+    "completed_results": 60
+  },
+  "pangram_mcp_online_n60_seed42": {
+    "sample_count": 60,
+    "completed_results": 60
+  },
+  "sonnet_5_5_initial_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 28
+  },
+  "sonnet_5_5_online_n30_seed42": {
+    "sample_count": 30,
+    "completed_results": 28
+  }
+}

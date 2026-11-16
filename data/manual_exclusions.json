@@ -1,0 +1,17 @@
+{
+  "reviewed_at": "2026-10-31T21:48:24.360844+00:00",
+  "method": "Manual semantic review of all 160 distinct prompts in the current cohorts.",
+  "exclusions": [
+    {
+      "conversation_id": "d765524131762107a9966eca034bf273",
+      "reason": "Requests generation of a Python web-crawling/newsletter-signup bot.",
+      "prompt": "Write a puthon bot that crawls the web and searches for email newsletters and then signs up for them."
+    },
+    {
+      "conversation_id": "f7f19987eb39a080fd3c0e51cfa3b088",
+      "reason": "Requests debugging/repair of a SQL CREATE TABLE query.",
+      "prompt": "CREATE TABLE customer(cust_id integer PRIMARY KEY, first_name varchar, last_name varchar, address varchar, city varchar, state varchar, postal varchar,  email varchar, balance DECIMAL(4, 2), credit_limit(10, 2), rep_id: intager);\n В чем ошибка в sql запросе? Ругается mysql"
+    }
+  ],
+  "policy": "Exclude programming/code-generation and code-repair tasks; retain prose about software or technical topics."
+}
